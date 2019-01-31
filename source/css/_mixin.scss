@@ -1,0 +1,14 @@
+@mixin h-block($text: "h1") {
+    position: absolute;
+    left: -2rem;
+    content: $text;
+    color: $grey-color;
+    font-size: 1rem;
+}
+
+@mixin li-block() {
+    position: absolute;
+    left: -2rem;
+    color: $primary-color;
+    font-size: 1rem;
+}

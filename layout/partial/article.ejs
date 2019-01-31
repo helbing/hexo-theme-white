@@ -1,0 +1,27 @@
+<% let coverClass = (index % 2 == 0) ? "left-item" : "right-item" %>
+<% let contentClass = (index % 2 == 0) ? "right-item" : "left-item" %>
+<article class="article">
+  <div class="cover <%- coverClass %>" style="background-image:url(<%- post.cover %>);">
+    <img src="<%- post.cover %>">
+  </div>
+  <div class="content <%- contentClass %>">
+    <div class="wrapper">
+      <time><%- post.date.format(theme.date_format).toUpperCase() %></time>
+      <h2 class="title">
+        <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+      </h2>
+      <div class="description">
+        <%- post.description %>
+      </div>
+      <ul class="tags">
+        <% post.tags.each((tag) => { %>
+          <% if (page.tag == tag.name) { %>
+            <li><a class="active" href="<%- url_for(tag.path) %>">#<%- tag.name %></a></li>
+          <% } else { %>
+            <li><a href="<%- url_for(tag.path) %>">#<%- tag.name %></a></li>
+          <% } %>
+        <%}) %>
+      </ul>
+    </div>
+  </div>
+</article>

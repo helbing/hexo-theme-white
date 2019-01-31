@@ -1,0 +1,38 @@
+<aside id="menu">
+  <header>
+    <div class="wrapper">
+      <button class="close"><i class="fas fa-times"></i></button>
+      <h1 class="title"><%- theme.title %></h1>
+    </div>
+  </header>
+  <div class="wrapper">
+    <div class="description">
+      <%- theme.description %>
+    </div>
+    <nav>
+      <ul>
+        <% Object.keys(theme.menu).forEach((key) => { %>
+          <% if (is_current(theme.menu[key])) { %>
+            <li><a href="<%- url_for(theme.menu[key]) %>" class="active"><%- key %></a></li>
+          <% } else { %>
+            <li><a href="<%- url_for(theme.menu[key]) %>"><%- key %></a></li>
+          <% } %>
+        <% }) %>
+      </ul>
+    </nav>
+    <ul class="social">
+      <% Object.keys(theme.social).forEach((key) => { %>
+        <li>
+          <a target="__bank" href="<%- theme.social[key].url %>">
+            <i class="<%- theme.social[key].icon %>"></i>
+          </a>
+        </li>
+      <% }) %>
+    </ul>
+    <footer>
+      &copy;
+      <a target="__bank" href="<%- theme.copyright.url %>"><%- theme.copyright.name %></a> -
+      Powered by <a target="__bank" href="https://hexo.io">Hexo</a> & <a target="__bank" href="https://github.com/hexo-theme-white">White</a>.
+    </footer>
+  </div>
+</aside>

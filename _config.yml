@@ -1,0 +1,41 @@
+# Header
+title: WHITE
+description: "A simple, concise blog theme for Hexo."
+menu:
+  Home: /
+  Tags: /tags
+  About: /about
+  Rss: /atom.xml
+
+# Rss
+rss: atom.xml
+
+# Date / Time format
+date_format: "MMMM D, YYYY"
+time_format: HH:mm:ss
+
+# Copyright
+copyright:
+  name: helbing
+  url: https://github.com/helbing
+
+# Favicon
+favicon: /favicon.png
+
+# Social account
+social:
+  github:
+    url: https://github.com/helbing
+    icon: "fab fa-github"
+  mail:
+    url: mailto:helbingxxx@gmail.com
+    icon: "fas fa-at"
+
+# Gitalk
+gitalk:
+  enable: true
+  client_id:
+  client_secret:
+  repo:
+  owner:
+  admin: []

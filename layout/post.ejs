@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- partial("partial/head.ejs", {"comment": !page.type, "highlight": !page.type}) %>
+  <body>
+    <%- partial("partial/menu.ejs") %>
+    <%- partial("partial/header.ejs") %>
+    <%- partial("partial/search.ejs") %>
+    <div class="container">
+      <main>
+        <% if (page.type == "tags") { %>
+          <div id="tag-cloud">
+            <input type="text" placeholder="Input And Enter To Search">
+            <div class="wrapper">
+              <%- tagcloud({"min_font": 1, "max_font": 1, "unit": "rem"}) %>
+            </div>
+          </div>
+          <script>
+            const tagCloudInput = document.querySelector("#tag-cloud input");
+            const tagList = document.querySelectorAll("#tag-cloud a");
+
+            tagCloudInput.addEventListener("keydown", event => {
+              if (event.code == "Enter") {
+
+                let searchValue = tagCloudInput.value.trim();
+
+                if (searchValue == '') {
+                  tagList.forEach(tag => {
+                    tag.style.display = 'block';
+                  });
+
+                  return;
+                }
+
+                tagList.forEach(tag => {
+                  if (tag.text.toLowerCase().indexOf(searchValue.toLowerCase()) > -1) {
+                    tag.style.display = 'block';
+                  } else {
+                    tag.style.display = 'none';
+                  }
+                });
+              }
+            });
+          </script>
+        <% } else if (page.type == "about") { %>
+          <% if (page.avatar || page.author) { %>
+            <div id="userinfo">
+              <% if (page.avatar) { %>
+                <img class="avatar" src="<%- page.avatar %>">
+              <% } %>
+              <% if (page.author) { %>
+                <h2 class="author"><%- page.author %></h2>
+              <% } %>
+            </div>
+          <% } %>
+          <div id="article">
+            <%- page.content %>
+          </div>
+        <% } else if (!page.type) { %>
+          <%- partial("partial/article.ejs", {"post": page, "index": 0})  %>
+          <div id="article">
+            <%- page.content %>
+          </div>
+          <% let prevPath = page.prev ? url_for(page.prev.path) : "javascript:void(0)" %>
+          <% let nextPath = page.next ? url_for(page.next.path) : "javascript:void(0)" %>
+          <%- partial("partial/paginate.ejs", {
+            "current": 0,
+            "total": 0,
+            "prev_path": prevPath,
+            "next_path": nextPath
+          }) %>
+          <% if (theme.gitalk.enable) { %>
+            <div id="gitalk-container"></div>
+            <script>
+              const gitalk = new Gitalk({
+                clientID: "<%- theme.gitalk.client_id %>",
+                clientSecret: "<%- theme.gitalk.client_secret %>",
+                repo: "<%- theme.gitalk.repo %>",
+                owner: "<%- theme.gitalk.owner %>",
+                admin: "<%- theme.gitalk.admin %>".split(","),
+              });
+              gitalk.render('gitalk-container');
+            </script>
+          <% } %>
+          <%- partial("partial/back-to-top.ejs") %>
+        <% } %>
+      </main>
+    </div>
+  </body>
+</html>

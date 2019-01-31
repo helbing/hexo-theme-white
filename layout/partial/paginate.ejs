@@ -1,0 +1,11 @@
+<ul class="paginate">
+  <li>
+    <a href="<%- prev_path %>"><i class="fas fa-arrow-left"></i>&nbsp;PREV</a>
+  </li>
+  <% if (current || total) { %>
+    <li><%- current %> / <%- total %></li>
+  <% } %>
+  <li>
+    <a href="<%- next_path %>">NEXT&nbsp;<i class="fas fa-arrow-right"></i></a>
+  </li>
+</ul>

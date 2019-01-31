@@ -1,0 +1,66 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>
+    <% if (page && page.title) { %>
+      <%- page.title %>
+    <% } else { %>
+      <%- theme.title %>
+    <% } %>
+  </title>
+  <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- theme.favicon %>">
+  <% } %>
+  <link href="https://cdn.bootcss.com/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
+  <%- css('css/index.css') %>
+  <%- js('js/index.js') %>
+
+  <% if (highlight) { %>
+    <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/github.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/ada.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/cpp.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/css.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/dart.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/dockerfile.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/elixir.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/erlang.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/go.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.0/languages/haskell.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/ini.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.0/languages/java.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.0/languages/javascript.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.0/languages/json.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.0/languages/julia.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.0/languages/kotlin.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/python.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/protobuf.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/r.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.0/languages/lisp.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.0/languages/llvm.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.0/languages/lua.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.0/languages/makefile.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.0/languages/markdown.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/ruby.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/rust.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/scala.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/scss.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/shell.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/sql.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/swift.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/tex.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/typescript.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/verilog.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/vim.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/xml.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/languages/yaml.min.js"></script>
+  <% } %>
+
+  <% if (comment) { %>
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <% } %>
+</head>

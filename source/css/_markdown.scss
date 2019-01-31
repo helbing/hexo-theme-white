@@ -1,0 +1,147 @@
+#article {
+    margin: $base-length 0;
+    width: auto;
+    height: auto;
+    padding: 0 3.125rem;
+    overflow: hidden;
+    p,
+    blockquote,
+    ul,
+    ol,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    table {
+        position: relative;
+        box-sizing: border-box;
+    }
+    h1::before {
+        @include h-block("h1");
+    }
+    h2::before {
+        @include h-block("h2");
+    }
+    h3::before {
+        @include h-block("h3");
+    }
+    h4::before {
+        @include h-block("h4");
+    }
+    h5::before {
+        @include h-block("h5");
+    }
+    h6::before {
+        @include h-block("h6");
+    }
+    a {
+        color: $primary-color;
+    }
+    blockquote {
+        padding-left: 1.25rem;
+        margin: 0;
+        border-left: 0.125rem solid $primary-color;
+    }
+    p>code {
+        background-color: $primary-color;
+        color: $white-color;
+    }
+    pre {
+        position: relative;
+        overflow: auto;
+        >code {
+            padding: 2rem;
+            line-height: 1.875rem;
+        }
+        >.lang {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: .625rem;
+            color: $grey-color;
+        }
+    }
+    ul,
+    ol {
+        margin: 0;
+        padding: 0;
+        counter-reset: section;
+        list-style-type: none;
+    }
+    ul ul,
+    ul ol,
+    ol ul,
+    ol ol {
+        padding: 0.3125rem 0 0.3125rem 2rem;
+    }
+    li {
+        position: relative;
+        width: 100%;
+        height: auto;
+        list-style: none;
+        margin: 0.3125rem 0;
+    }
+    ul>li::before {
+        @include li-block;
+        font-weight: bold;
+        content: "*";
+    }
+    ol>li::before {
+        counter-increment: section;
+        content: counter(section);
+        @include li-block;
+        font-weight: bold;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    table {
+        margin: 0.625rem 0;
+        max-width: 100%;
+        border: 0.0625rem solid $light-grey-color;
+        border-spacing: 0;
+        th,
+        td {
+            padding: 1.25rem;
+            border: 0.0625rem solid $light-grey-color;
+        }
+        th {
+            background-color: $light-grey-color;
+        }
+    }
+    p {
+        line-height: 1.5rem;
+    }
+}
+
+@media (min-width: 576px) {
+    article#article {
+        margin: $base-length 0;
+        padding: 0 3.125rem;
+    }
+}
+
+@media (min-width: 768px) {
+    article#article {
+        margin: $base-length * 2 0;
+        padding: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    article#article {
+        margin: $base-length * 2 0;
+        padding: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    article#article {
+        margin: $base-length * 2 0;
+        padding: 0;
+    }
+}

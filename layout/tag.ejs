@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- partial("partial/head.ejs", {"comment": false, "highlight": false}) %>
+  <body>
+    <%- partial("partial/menu.ejs") %>
+    <%- partial("partial/header.ejs") %>
+    <%- partial("partial/search.ejs") %>
+    <div class="container">
+      <main>
+        <% page.posts.each((post, index) => { %>
+          <%- partial("partial/article.ejs", {"post": post, "index": index}) %>
+        <%}); %>
+        <% let prevPath = page.prev ? url_for(page.prev_link) : "javascript:void(0)" %>
+        <% let nextPath = page.next ? url_for(page.next_link) : "javascript:void(0)" %>
+        <%- partial("partial/paginate.ejs", {
+          "current": page.current,
+          "total": page.total,
+          "prev_path": prevPath,
+          "next_path": nextPath
+        }) %>
+        <%- partial("partial/back-to-top.ejs") %>
+      </main>
+    </div>
+  </body>
+</html>
