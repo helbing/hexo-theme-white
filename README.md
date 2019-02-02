@@ -126,7 +126,7 @@ gitalk:
   admin: []
 ```
 
-you can read the [document](https://github.com/gitalk/gitalk)
+you can read the [document](https://github.com/gitalk/gitalk)
 
 ### About me page
 
