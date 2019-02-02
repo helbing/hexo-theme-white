@@ -7,7 +7,7 @@ simple, concise blog theme for [Hexo](https://hexo.io).
 ### Install
 
 ```bash
-$ git clone https://github.com/hexojs/hexo-theme-white.git themes/white
+git clone https://github.com/helbing/hexo-theme-white.git themes/white
 ```
 
 ### Enable
