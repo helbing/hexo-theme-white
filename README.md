@@ -104,7 +104,7 @@ social:
     icon: "fab fa-github"
   mail:
     url: mailto:helbingxxx@gmail.com
-    icon: "fas fa-at"
+    icon: "fas fa-at"
   xxx:
     url:
     icon:
