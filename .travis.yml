@@ -1,6 +1,7 @@
 branches:
   only:
     - master
+script: true
 deploy:
   provider: npm
   email: "helbingxxx@gmail.com"
