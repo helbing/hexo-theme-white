@@ -1,0 +1,9 @@
+branches:
+  only:
+    - master
+deploy:
+  provider: npm
+  email: "helbingxxx@gmail.com"
+  api_key: $NPM_KEY
+  on:
+    branch: master
