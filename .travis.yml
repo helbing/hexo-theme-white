@@ -8,5 +8,3 @@ deploy:
   api_key: $NPM_KEY
   on:
     branch: master
-    tags: true
-  tag: next
