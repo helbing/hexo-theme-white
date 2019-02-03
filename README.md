@@ -112,6 +112,18 @@ social:
 
 you can find icons in [fontawesome](https://fontawesome.com/icons)
 
+### Highlight
+
+```yml
+# _config.yml
+
+highlight:
+  enable: false
+  line_number: false
+  auto_detect: false
+  tab_replace:
+```
+
 ### GitTalk
 
 ```yml
