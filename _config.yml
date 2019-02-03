@@ -1,6 +1,6 @@
 # Header
 title: WHITE
-description: "A simple, concise blog theme for Hexo."
+description: "Hello Goodbye & Hello"
 menu:
   Home: /
   Tags: /tags
@@ -31,11 +31,7 @@ social:
     url: mailto:helbingxxx@gmail.com
     icon: "fas fa-at"
 
-# Gitalk
-gitalk:
+# Disqus
+disqus:
   enable: true
-  client_id:
-  client_secret:
-  repo:
-  owner:
-  admin: []
+  shortname:

@@ -124,18 +124,14 @@ highlight:
   tab_replace:
 ```
 
-### GitTalk
+### Disqus
 
 ```yml
 # themes/white/_config.yml
 
-gitalk:
+disqus:
   enable: true
-  client_id:
-  client_secret:
-  repo:
-  owner:
-  admin: []
+  shortname: # your disqus shortname
 ```
 
 you can read the [document](https://github.com/gitalk/gitalk)
