@@ -6,7 +6,7 @@
   </div>
   <div class="content <%- contentClass %>">
     <div class="wrapper">
-      <time><%- post.date.format(theme.date_format).toUpperCase() %></time>
+      <time><%- post.date.format(config.date_format).toUpperCase() %></time>
       <h2 class="title">
         <a href="<%- url_for(post.path) %>"><%- post.title %></a>
       </h2>

@@ -10,10 +10,6 @@ menu:
 # Rss
 rss: atom.xml
 
-# Date / Time format
-date_format: "MMMM D, YYYY"
-time_format: HH:mm:ss
-
 # Copyright
 copyright:
   name: helbing
