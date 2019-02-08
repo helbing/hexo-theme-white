@@ -102,7 +102,8 @@ article.article {
         box-sizing: border-box;
         flex: 1;
         height: auto;
-        background-size: cover;
+        background-size: contain;
+        background-color: rgba($color: $black-color, $alpha: 0.8);
         background-position: center;
         background-repeat: no-repeat;
         >img {
