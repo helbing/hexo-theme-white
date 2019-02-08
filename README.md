@@ -190,10 +190,10 @@ edit `source/_posts/<title>.md`
 ```md
 ---
 date: 2018-12-14
-title: # post title
-description: # your post description
-tags: ["Hello", "World"] # post tags, like
-cover: # your post cover, like https://xxxx/xxxx.png
+title: # post title, recommended length 20
+description: # your post description, recommend length 100 - 120
+tags: ["hello", "world"] # post tags
+cover: # your post cover, like https://xxxx/xxxx.png, recommend 1920px * 1080px
 ---
 
 your post content

@@ -100,10 +100,9 @@ article.article {
     }
     .cover {
         box-sizing: border-box;
-        flex: 1;
+        flex: 2;
         height: auto;
-        background-size: contain;
-        background-color: $grey-color;
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         >img {
@@ -472,11 +471,11 @@ aside#search {
         width: 720px;
     }
     article.article {
-        display: flex;
+        display: block;
         margin-bottom: 6.25rem;
         .cover {
             >img {
-                display: none;
+                display: block;
             }
         }
     }
@@ -494,11 +493,11 @@ aside#search {
         width: 840px;
     }
     article.article {
-        display: flex;
+        display: block;
         margin-bottom: 6.25rem;
         .cover {
             >img {
-                display: none;
+                display: block;
             }
         }
     }
