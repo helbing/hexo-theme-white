@@ -1,4 +1,6 @@
 # White
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhelbing%2Fhexo-theme-white.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhelbing%2Fhexo-theme-white?ref=badge_shield)
+
 
 simple, concise blog theme for [Hexo](https://hexo.io).
 
@@ -198,3 +200,7 @@ cover: # your post cover, like https://xxxx/xxxx.png, recommend 1920px * 1080px
 
 your post content
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhelbing%2Fhexo-theme-white.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhelbing%2Fhexo-theme-white?ref=badge_large)
